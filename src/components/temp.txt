@@ -1,0 +1,33 @@
+                        <div className='product-page__info'>
+                            <div>
+                                <h1>{this.props.product.name}</h1>
+                                <Rating maxRating={5} defaultRating={3} icon='star' size='small' />
+                            </div>
+                            <div>
+                                <span className='cart-page_green'>In Stock</span>
+                            </div>
+                            <div>
+                                <p className='product-page__desc'>{this.props.product.description}</p>
+                            </div>
+                            <div>
+                                <Label as='a' color='teal' tag>
+                                    <h3>{`$${this.props.product.price}`}</h3>
+                                </Label>
+                            </div>
+                            <div>
+                                <h3>Size: </h3>
+                                <Select placeholder='Choose your Size' options={this.props.product.sizes} />
+                            </div>
+                            <div className='product-page__buttons'>
+                                <div>
+                                    <Button 
+                                    onClick={this.handleAddToCart}
+                                    disabled={this.state.clicked}
+                                    content='Add to Cart'
+                                    size='large'
+                                    color='green'
+                                    />
+                                </div>
+                                
+                            </div>
+                        </div>

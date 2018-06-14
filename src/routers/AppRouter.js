@@ -1,24 +1,55 @@
-import {Router, Route, Switch} from 'react-router-dom';
-import createHistory from 'history/createBrowserHistory';
 import React from 'react';
-import DashboardPage from '../components/DashboardPage';
+import createHistory from 'history/createBrowserHistory';
+import { BrowserRouter, Route, Switch, Router } from 'react-router-dom';
+import { connect } from 'react-redux';
+import { addToCart } from '../actions/shoppingCart';
+
 import NotFoundPage from '../components/NotFoundPage';
-import LoginPage from '../components/LoginPage';
-import PrivateRoute from './PrivateRoute';
-import PublicRoute from './PublicRoute';
+import Header from '../components/Header';
+import HomePage from '../components/HomePage';
+import StorePage from '../components/StorePage';
+import ProductView from '../components/ProductView';
+import CartPage from '../components/CartPage';
 
 export const history = createHistory();
 
-const AppRouter = () => (
-    <Router history={history}>
-    <div>
-    <Switch>
-            <PublicRoute path="/" component={LoginPage} exact={true}/>
-            <PrivateRoute path="/dashboard" component={DashboardPage} />
-            <Route component={NotFoundPage} />
-        </Switch>
-    </div>
-    </Router>
-);
+export class AppRouter extends React.Component {
 
-export default AppRouter;
+    componentDidMount(){
+        try {
+            const json = localStorage.getItem('cart');
+            const cart = JSON.parse(json);
+            if(cart){
+                this.props.startAddToCart(cart);
+            }
+        } catch (err) {
+            console.log(err);
+        }
+    }
+
+    render(){
+        return(
+            <Router history={history}>
+                <BrowserRouter>
+                <div>
+                <Header/>
+                    <Switch>
+                        <Route path='/' component={HomePage} exact={true}/>
+                        <Route path='/store' component={StorePage} exact={true}/>
+                        <Route path='/store/:id' component={ProductView} />
+                        <Route path='/cart' component={CartPage} exact={true}/>
+                        <Route component={NotFoundPage} />     
+                    </Switch>
+                </div>
+                </BrowserRouter>
+            </Router>
+        );
+    }
+}
+
+
+const mapDispatchToProps = (dispatch) => ({
+    startAddToCart: (cart) => dispatch(addToCart(cart))
+});
+
+export default connect(undefined, mapDispatchToProps)(AppRouter);

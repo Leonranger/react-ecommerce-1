@@ -10,6 +10,7 @@ import { firebase } from './firebase/firebase';
 import 'react-dates/lib/css/_datepicker.css';
 import LoadingPage from './components/LoadingPage';
 
+
 const store = configureStore();
 
 const jsx = ( 
@@ -32,13 +33,12 @@ firebase.auth().onAuthStateChanged((user) => {
     if(user) {
         store.dispatch(login(user.uid));
         renderApp();
-        if(history.location.pathname === '/'){
-        history.push('/dashboard');
+        if(history.location.pathname !== '/'){
+        history.push('/');
         }
     }else{
         store.dispatch(logout());
         renderApp();
-        history.push('/');
     }
 });
 

@@ -5,14 +5,32 @@
 .header__content {
     align-items: center;
     display: flex;
-    justify-content: space-between;
+    flex-direction: row;
     padding: $s-size 0;
 }
 
 .header__title {
     color: white;
     text-decoration: none;
-    h1 {
-        margin: 0;
-    }
+}
+
+.header__pages {
+    margin: 0 0 0 $l-size;
+    flex-grow: 8;
+}
+
+.header__pages-item {
+    text-decoration: none;
+    color: white;
+    margin: 0 0 0 $l-size;
+}
+
+.header__cart {
+    flex-grow: 1;
+}
+
+.ui.menu .item>.label {
+    position: absolute;
+    left: 35px;
+    bottom: 34px;
 }

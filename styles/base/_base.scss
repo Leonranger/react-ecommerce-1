@@ -12,16 +12,11 @@ html {
     color: $dark-grey;
     line-height: 1.6;
   }
-  
-  button {
-    cursor: pointer;
-  }
-  
-  button:disabled {
-    cursor: default;
-  }
 
-  .is-active{
-    font-weight: bold;
+  .page-top-margin {
+    margin-top: $xl-size;
   }
   
+  .cursor {
+    cursor: pointer;
+}
