@@ -1,9 +1,8 @@
 import React from 'react';
-import { connect } from 'react-redux';
 import ProductItem from './ProductItem';
-import { Card, Container } from 'semantic-ui-react';
+import { Container } from 'semantic-ui-react';
 
-export const ProductList = (props) => (
+const ProductList = (props) => (
   <Container>
     <div className='products-list'>
       {
@@ -15,10 +14,6 @@ export const ProductList = (props) => (
     </Container>
 );
 
-const mapStateToProps = (state) => {
-  return {
-    products: state.products
-  };
-};
 
-export default connect(mapStateToProps)(ProductList);
+
+export default ProductList;

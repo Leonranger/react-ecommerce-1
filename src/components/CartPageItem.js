@@ -35,7 +35,7 @@ export class CartPageItem extends React.Component {
                         </div>
                         <div>
                             <ul>
-                                <li><h4>{this.props.name}</h4></li>
+                                <li><h4>{this.props.title}</h4></li>
                                 <li>{this.props.brand}</li>
                                 <li>Type: {this.props.type}</li>
                                 <li>Size: {this.props.size}</li>

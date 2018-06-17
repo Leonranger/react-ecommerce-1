@@ -30,12 +30,10 @@ export class SideBar extends Component {
               width='thin'
               visible={visible}
               icon='labeled'
+              className='menu-sidebar'
               vertical
               inverted
             >
-              <Menu.Item name='close' onClick={this.toggleVisibility}>
-                  <Icon name='chevron left'/>
-              </Menu.Item>
               <Link to='/'>
                   <Menu.Item name='home'>
                     <Icon name='home' />

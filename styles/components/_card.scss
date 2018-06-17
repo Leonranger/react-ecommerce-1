@@ -1,12 +1,11 @@
 .card {
     box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
     transition: 0.3s;
-    width: 25%;
+    width: 200px;
     border-radius: 5px;
-    margin: 10px;
+    margin: 10px 0;
     @media (max-width: $desktop-breakpoint) {
-        width: 100%;
-        margin: 10px 0;
+        width: 165px;
     }
 }
 
@@ -26,21 +25,21 @@
 .products-list {
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
+    justify-content: space-between;
     flex-wrap: wrap;
-    @media (max-width: $desktop-breakpoint) {
-        flex-direction: column;
-        flex-wrap: nowrap;
-        justify-content: center;
-    }
+    // @media (max-width: $desktop-breakpoint) {
+    //     flex-direction: column;
+    //     flex-wrap: nowrap;
+    //     justify-content: center;
+    // }
 }
 
-.card-name_price {
-    margin-top: 2px;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-}
+// .card-name_price {
+//     margin-top: 2px;
+//     display: flex;
+//     flex-direction: row;
+//     justify-content: space-between;
+// }
 
 .card-rating {
     display: flex;

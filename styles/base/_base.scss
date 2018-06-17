@@ -16,7 +16,15 @@ html {
   .page-top-margin {
     margin-top: $xl-size;
   }
+
+  .mt {
+    margin-top: 35px;
+  }
   
   .cursor {
     cursor: pointer;
+}
+
+.ui.segment{
+  border: none !important;
 }

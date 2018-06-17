@@ -2,8 +2,9 @@
 const productsReducerDefaultState = [
     {
         id: '12',
-        name: 'D-Jack',
+        title: 'D-Jack',
         type: 'shirt',
+        category: 'fashion',
         brand: 'nike',
         gender: 'female',
         sizes: ['XS', 'S', 'M', 'L', 'XL', 'XXL'],
@@ -19,8 +20,9 @@ const productsReducerDefaultState = [
         ]
     },{
         id: '13',
-        name: 'Dolly Op',
+        title: 'Dolly Op',
         type: 'shirt',
+        category: 'woo',
         brand: 'adidas',
         gender: 'female',
         sizes: ['XS', 'S', 'M', 'L', 'XL', 'XXL'],
@@ -36,8 +38,9 @@ const productsReducerDefaultState = [
         ]
     },{
         id: '14',
-        name: 'Ambella',
+        title: 'Ambella',
         type: 'shorts',
+        category: 'vaa',
         brand: 'puma',
         gender: 'female',
         sizes: ['XS', 'S', 'M', 'L', 'XL', 'XXL'],
@@ -53,14 +56,15 @@ const productsReducerDefaultState = [
         ]
     },{
         id: '15',
-        name: 'UNDIZ ROYALTIZ GEL BRA',
+        title: 'UNDIZ ROYALTIZ GEL BRA',
         type: 'shorts',
+        category: 'fashion',
         brand: 'puma',
         gender: 'female',
         sizes: ['XS', 'S', 'M', 'L', 'XL', 'XXL'],
         color: 'black',
         description: '',
-        price: 25,
+        price: 30,
         amount: 1,
         images: [
             {url: '/images/ASOS41.jpg'},

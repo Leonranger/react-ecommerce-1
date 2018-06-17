@@ -49,7 +49,7 @@ export class CartPage extends React.Component {
                             <Link to='/store' >
                                 <Segment textAlign='center'>
                                     
-                                        <h3>Your shopping cart is empty</h3>
+                                        <h3>Your cart is currently empty.</h3>
                                         <Icon size='massive' name='shopping bag' />
                                             <h4>Click to start shop</h4>
                                     

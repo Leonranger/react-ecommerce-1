@@ -21,6 +21,7 @@ export default class ProductItem extends React.Component {
             <div className="card">
                 <Dimmer.Dimmable
                     as={Image}
+                    label={{ribbon: true, size: 'tiny',color: 'teal', content: <h5>{`$${this.props.price}`}</h5> }}
                     dimmed={active}
                     dimmer={{ active, content }}
                     onMouseEnter={this.handleShow}
@@ -32,9 +33,6 @@ export default class ProductItem extends React.Component {
                     <div className='card-name_price'>
                         <div>
                             <h4>Jane Doe</h4>
-                        </div>
-                        <div>
-                            <Label tag><h4>${this.props.price}</h4></Label>
                         </div>
                     </div>
                     <div className='card-rating'>

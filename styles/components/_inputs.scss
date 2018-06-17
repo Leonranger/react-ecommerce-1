@@ -1,16 +1,18 @@
-.text-input {
-    border: 1px solid #cacccd;
-    height: 50px;
-    font-size: $font-size-large;
-    font-weight: 300;
-    padding: $s-size;
+.results {
+    left: 0 !important;
+    
 }
 
-.select {
-    @extend .text-input;
+.search > .ui > input {
+    padding-right: 0 !important;
+    @media (max-width: $desktop-breakpoint) {
+        width: 120px !important;
+    }
 }
 
-.textarea {
-    @extend .text-input;
-    height: 10rem;
+.search-input {
+    padding: 9px;
+    @media (max-width: $desktop-breakpoint) {
+        margin: 0 auto;
+    }
 }

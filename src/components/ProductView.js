@@ -44,7 +44,7 @@ export class ProductView extends React.Component {
                                 <Image 
                                 src={this.props.product.images[photoIndex].url} 
                                 onClick={() => this.setState({ isOpen: true })} 
-                                label={{ as: 'a', corner: 'left', size: 'big', icon: 'search plus' }}
+                                label={{ as: 'a', corner: 'left', size: 'big',color: 'teal', icon: 'search plus' }}
                                 className='product-view_main-image cursor'
                                 />
                             </div>
@@ -67,7 +67,7 @@ export class ProductView extends React.Component {
                         </div>
                         <div className='product-page__info'>
                             <div>
-                                <h1>{this.props.product.name}</h1>
+                                <h1>{this.props.product.title}</h1>
                                 <Rating maxRating={5} defaultRating={3} icon='star' size='small' />
                             </div>
                             <div>
@@ -83,7 +83,7 @@ export class ProductView extends React.Component {
                             </div>
                             <div>
                                 <Form>
-                                    <Form.Field onChange={(this.handleSelectSize)} error={this.state.error} control='select'>
+                                    <Form.Field width='9' onChange={(this.handleSelectSize)} error={this.state.error} control='select'>
                                         <option hidden defaultValue>Choose your Size</option>
                                         {
                                             this.props.product.sizes.map((size, i) => {
