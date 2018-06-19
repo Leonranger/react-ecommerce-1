@@ -28,3 +28,9 @@ html {
 .ui.segment{
   border: none !important;
 }
+
+.centered {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

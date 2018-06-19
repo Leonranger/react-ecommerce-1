@@ -32,12 +32,12 @@ export default class ProductItem extends React.Component {
                 <div className="card-container">
                     <div className='card-name_price'>
                         <div>
-                            <h4>Jane Doe</h4>
+                            <h4>{this.props.title}</h4>
                         </div>
                     </div>
                     <div className='card-rating'>
                         <div>
-                            <div><p>Interior Designer</p></div>
+                            <div><p>{this.props.type}</p></div>
                             <div><Rating maxRating={5} defaultRating={3} icon='star' size='small' /></div>
                         </div>
                         <div className='card-heart'>

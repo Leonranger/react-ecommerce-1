@@ -6,7 +6,7 @@ export const fixProductsData = (arr) => {
         let temp = {
           title: arr[i].title,
           productid: arr[i].id,
-          description: arr[i].description,
+          type: arr[i].type,
           image: arr[i].images[0].url,
           price: String(arr[i].price)
         }

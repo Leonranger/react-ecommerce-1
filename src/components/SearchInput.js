@@ -8,16 +8,16 @@ export default class SearchExampleStandard extends Component {
     this.resetComponent()
   }
 
-  resRender = ({ title, price, image, description, productid }) => (
+  resRender = ({ title, price, image, type, productid }) => (
     <Link to={`/store/${productid}`} >
       <div key={productid} className='search-popout'>
         <div key='image' className='image'>
           <Image src={image} size='small' />
         </div>
         <div key='content' className='content'>
-          {price && <div className='price'>{price}</div>}
+          {price && <div className='price'>${price}</div>}
           {title && <div className='title'>{title}</div>}
-          {description && <div className='description'>{description}</div>}
+          {type && <div className='description'>{type}</div>}
         </div>
       </div>
     </Link>

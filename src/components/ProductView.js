@@ -57,6 +57,7 @@ export class ProductView extends React.Component {
                                             onClick={() => this.setState({photoIndex: i})} 
                                             src={image.url} 
                                             size='tiny'
+                                            className='cursor'
                                             disabled={this.state.photoIndex !== i}
                                             />
                                         </div>

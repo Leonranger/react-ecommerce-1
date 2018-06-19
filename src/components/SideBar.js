@@ -46,6 +46,12 @@ export class SideBar extends Component {
                     Store
                   </Menu.Item>
               </Link>
+              <Link to='/watchlist'>
+                  <Menu.Item name='watchlist'>
+                    <Icon name='heart' />
+                    Watch List
+                  </Menu.Item>
+              </Link>
           </Sidebar>
       </div>
     )

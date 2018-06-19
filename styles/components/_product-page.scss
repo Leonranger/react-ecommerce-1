@@ -16,9 +16,6 @@
 .product-view_images {
     display: flex;
     margin-top: 20px;
-    @media (max-width: $desktop-breakpoint) {
-        justify-content: space-between;
-    }
 }
 
 .product-page__info {
