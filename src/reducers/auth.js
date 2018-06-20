@@ -1,8 +1,13 @@
 export default (state = {}, action) => {
     switch(action.type) {
         case 'LOGIN':
+            console.log(action);
             return {
-                uid: action.uid
+                uid: action.user.uid,
+                name: action.user.displayName,
+                email: action.user.email ? action.user.email : action.user.providerData[0].email,
+                image: action.user.photoURL,
+                fid: action.user.providerData[0].uid
             };
         case 'LOGOUT':
             return {};

@@ -29,4 +29,10 @@
     @media (max-width: $desktop-breakpoint) {
         margin: 15px 0;
     }
+    >a {
+        color: $off-white;
+    }
+    >a:hover {
+        color: #54FFFF;
+    }
 }
