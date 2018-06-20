@@ -11,7 +11,7 @@ export class CartPageItem extends React.Component {
     toggleVisibility = () => this.setState({ visible: !this.state.visible});
 
     handleRemove = () =>{
-        this.toggleVisibility()
+        this.toggleVisibility();
         setTimeout(() => {
             this.props.startRemoveFromCart({id: this.props.id})
         }, 500);

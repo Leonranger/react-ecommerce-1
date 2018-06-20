@@ -16,7 +16,7 @@ export class AuthButton extends React.Component {
     render(){
         return (
             this.props.isAuthenticated ? (
-                <Modal trigger={<Icon className='cursor' name='user' size='large'/>} size='mini' centered={false}>
+                <Modal closeIcon trigger={<Icon className='cursor' name='user' size='large'/>} size='mini' centered={false}>
                     <Modal.Header>Profile</Modal.Header>
                     <Modal.Content>
                         <div className='centered-text'>

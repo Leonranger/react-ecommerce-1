@@ -3,11 +3,25 @@ import { Link } from 'react-router-dom';
 import { Image, Label, Rating, Button, Icon, Dimmer } from 'semantic-ui-react';
 
 export default class ProductItem extends React.Component {
-    state = {};
-    handleShow = () => this.setState({ active: true })
-    handleHide = () => this.setState({ active: false })
+    state = {
+        isWatched: false
+    };
+
+    handleShow = () => this.setState({ active: true });
+    handleHide = () => this.setState({ active: false });
+
+    addToWatch = () => {
+        if(this.state.isWatched){
+            this.setState({isWatched: false});
+        }else{
+            this.setState({isWatched: true});
+        }
+    }
+
+
 
     render(){
+        
         const { active } = this.state;
         const content = (
             <div>
@@ -16,7 +30,6 @@ export default class ProductItem extends React.Component {
                 </Link>
             </div>
         );
-
         return (
             <div className="card">
                 <Dimmer.Dimmable
@@ -41,7 +54,12 @@ export default class ProductItem extends React.Component {
                             <div><Rating maxRating={5} defaultRating={3} icon='star' size='small' /></div>
                         </div>
                         <div className='card-heart'>
-                            <Rating icon='heart' size='massive'/>
+                            <Icon 
+                            className='cursor' 
+                            onClick={this.addToWatch} 
+                            color={this.state.isWatched ? 'red': 'black'} 
+                            name='heart outline' 
+                            size='large' />
                         </div>
                     </div>
                 </div>
@@ -49,4 +67,5 @@ export default class ProductItem extends React.Component {
             );
     }
 }
+
 

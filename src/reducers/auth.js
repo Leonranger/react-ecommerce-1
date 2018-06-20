@@ -5,7 +5,7 @@ export default (state = {}, action) => {
             return {
                 uid: action.user.uid,
                 name: action.user.displayName,
-                email: action.user.email ? action.user.email : action.user.providerData[0].email,
+                email: action.user.email !== null ? action.user.email : action.user.providerData[0].email,
                 image: action.user.photoURL,
                 fid: action.user.providerData[0].uid
             };
