@@ -32,7 +32,7 @@ export default class HomePage extends React.Component {
                                 <span>
                                 My name is Alex Fadeev and I'm a practical software engineer. 
                                 This project contains my knowledge in React library which I learned independently.
-                                <br />The project also contains Firebase Database and Semantic-UI Freamwork.
+                                <br />The project also contains Firebase Database and Semantic-UI Framework.
                                 </span>
                             </div>
                             <h5>Check out my projects: </h5>
